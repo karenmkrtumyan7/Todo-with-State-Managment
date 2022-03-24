@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      form label {
+        width: 100px;
+      }
+      form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .form-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+        height: 64px;
+      }
+      .form-item > button {
+        border: none;
+        background: white;
+        padding: 0 1em;
+        height: 100%;
+        font-size: 2em;
+      }
+      .form-item:hover > button {
+        display: block;
+      }
+      .hide {
+        display: none;
+      }
+    </style>
+    <title>todos</title>
+  </head>
+  <body>
+    <h1 class="header-h1">todos</h1>
+    <div id="main">
+      <form id="mainForm" action="#" onsubmit="return false">
+        <div class="arrow">\/</div>
+        <input name="textInput" type="text" id="mainInput" placeholder="What needs to be done?" autocomplete="off" />
+      </form>
+      <!-- dynamically appends forms -->
+      <div class="formContainer"></div>
+      <!-- dynamically appends forms -->
+      <div id="bottomMenu" class="hide">
+        <p id="elementsCount"></p>
+        <form name="statusForm" action="#" onsubmit="return false">
+          <label for="allCheckBox">All</label>
+          <input id="allCheckBox" type="radio" name="status" value="All" checked />
+          <label for="activeCheckBox">Active</label>
+          <input id="activeCheckBox" type="radio" name="status" value="Active" />
+          <label for="completedCheckBox">Completed</label>
+          <input id="completedCheckBox" type="radio" name="status" value="Completed" />
+        </form>
+
+        <button id="clearChecked" class="hide">Clear completed</button>
+      </div>
+    </div>
+
+    <form name="myForm" action="#" class="create-todo form-item for-clone hide">
+      <input name="checkbox" type="checkbox" />
+      <input name="textInput" type="text" disabled value="kjhfakdsjkvsfbmfhsjkbkfsbvkhkbmdjksndvsbjnkjbnkjd" />
+      <button type="button" class="hide">x</button>
+    </form>
+    <!-- <script src="lesson.js"></script> -->
+    <script src="script.js"></script>
+  </body>
+</html>
