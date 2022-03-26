@@ -12,48 +12,13 @@
       crossorigin="anonymous"
     />
     <link rel="shortcut icon" href="img/fav.png" type="image/x-icon" />
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-      form label {
-        width: 100px;
-      }
-      form {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .form-item {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        position: relative;
-        height: 64px;
-      }
-      .form-item > button {
-        border: none;
-        background: white;
-        padding: 0 1em;
-        height: 100%;
-        font-size: 2em;
-      }
-      .form-item:hover > button {
-        display: block;
-      }
-      .hide {
-        display: none;
-      }
-    </style>
     <title>todos</title>
   </head>
   <body>
     <h1 class="header-h1">todos</h1>
     <div id="main">
       <form id="mainForm" action="#" onsubmit="return false">
-        <div class="arrow">\/</div>
+        <label class="toggle-all"></label>
         <input name="textInput" type="text" id="mainInput" placeholder="What needs to be done?" autocomplete="off" />
       </form>
       <!-- dynamically appends forms -->
